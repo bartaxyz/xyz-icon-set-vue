@@ -1,13 +1,13 @@
 {
-  "name": "xyz-icon-set",
-  "version": "0.2.0",
+  "name": "xyz-icon-set-vue",
+  "version": "0.2.2",
   "description": "",
   "main": "dist/index.js",
   "typings": "dist/index",
   "scripts": {
     "clean": "rimraf dist",
     "babel": "babel src -d dist --extensions \".ts,.tsx\"",
-    "build": "npm run babel && node ./dist/build.js",
+    "build": "npm run babel",
     "lint": "eslint src tests",
     "lint:fix": "npm run lint -- --fix",
     "test": "mocha tests --compilers js:babel-register",
@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bartaxyz/xyz-icon-set.git"
+    "url": "git+https://github.com/bartaxyz/xyz-icon-set-vue.git"
   },
   "keywords": [
     "xyz",
@@ -27,9 +27,9 @@
   "author": "Ondřej Bárta (https://ondrejbarta.xyz)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/bartaxyz/xyz-icon-set/issues"
+    "url": "https://github.com/bartaxyz/xyz-icon-set-vue/issues"
   },
-  "homepage": "https://github.com/bartaxyz/xyz-icon-set",
+  "homepage": "https://github.com/bartaxyz/xyz-icon-set-vue",
   "devDependencies": {
     "@babel/cli": "^7.0.0-beta.32",
     "@babel/core": "^7.0.0-beta.32",
@@ -37,7 +37,6 @@
     "@babel/plugin-proposal-object-rest-spread": "^7.0.0-beta.32",
     "@babel/preset-env": "^7.0.0-beta.32",
     "@babel/preset-typescript": "^7.0.0-beta.32",
-    "@types/handlebars": "^4.0.37",
     "@types/jsdom": "^11.0.4",
     "@types/node": "^10.0.0",
     "chai": "^4.1.2",
@@ -49,5 +48,9 @@
     "mocha": "^5.1.1",
     "rimraf": "^2.6.2",
     "typescript": "^2.6.2"
+  },
+  "dependencies": {
+    "vue": "^2.5.17",
+    "xyz-icon-set": "^0.2.0"
   }
 }
