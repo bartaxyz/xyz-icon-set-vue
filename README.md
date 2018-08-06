@@ -12,7 +12,7 @@ npm i xyz-icon-set-vue
 
 ## Usage
 
-```html
+```xml
 <div>
     <PaperPlane />
 </div>
