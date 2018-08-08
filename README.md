@@ -14,16 +14,14 @@ npm i xyz-icon-set-vue
 
 ```xml
 <div>
-    <PaperPlane />
+    <PaperPlane theme="regular" />
+    <PaperPlane theme="thin" />
 </div>
 ```
 
 ```js
 
-import XYZIconSet from 'xyz-icon-set-react';
-
-// Gets PaperPlane icon from 'regular' category
-const { PaperPlane } = XYZIconSet.regular;
+import { PaperPlane } from 'xyz-icon-set-react';
 
 export default {
     components: { PaperPlane },

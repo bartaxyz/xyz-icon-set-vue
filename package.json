@@ -1,6 +1,6 @@
 {
   "name": "xyz-icon-set-vue",
-  "version": "0.2.3",
+  "version": "0.3.8",
   "description": "Official Vue components package for icons from XYZ Icon Set",
   "main": "dist/index.js",
   "typings": "dist/index",
@@ -51,6 +51,6 @@
   },
   "dependencies": {
     "vue": "^2.5.17",
-    "xyz-icon-set": "^0.2.0"
+    "xyz-icon-set": "^0.3.0"
   }
 }

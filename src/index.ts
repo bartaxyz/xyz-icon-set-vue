@@ -1,23 +1,27 @@
-import Vue from 'vue';
+import Vue from 'vue/dist/vue.js';
 import XYZIconSet from 'xyz-icon-set';
 
-const categories = Object.keys(XYZIconSet);
+const iconKeys = Object.keys(XYZIconSet);
+const iconComponents = {};
 
-const icons = {};
+iconKeys.forEach((iconKey) => {
+    const iconObject = XYZIconSet[iconKey];
+    const name = iconObject.regular.name;
+    const capitalizedName = name.charAt(0).toUpperCase() + name.slice(1);
 
-categories.forEach((category) => {
-    const iconKeys = Object.keys(XYZIconSet[category]);
-
-    icons[category] = [];
-    iconKeys.forEach((iconKey) => {
-        const iconObject = XYZIconSet[category][iconKey];
-        const name = iconObject.name;
-        const capitalizedName = name.charAt(0).toUpperCase() + name.slice(1);
-
-        icons[category][capitalizedName] = Vue.component(capitalizedName + 'Icon', {
-            template: iconObject.source,
-        });
+    iconComponents[capitalizedName] = Vue.component(`${capitalizedName}Icon`, {
+        props: {
+            theme: {
+                type: String,
+                required: false,
+                default: 'regular',
+            }
+        },
+        template: `
+            ${iconObject.regular.source.replace('<svg ', '<svg v-if="theme ==\'regular\'" ')}
+            ${iconObject.thin.source.replace('<svg ', '<svg v-else-if="theme ==\'thin\'" ')}
+        `,
     });
 });
 
-export default icons;
+export default iconComponents;
