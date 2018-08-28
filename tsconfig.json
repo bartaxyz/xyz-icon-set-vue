@@ -1,13 +1,7 @@
-
 {
-    "compilerOptions": {
-        "types": [
-            "node"
-        ]
-    },
-    "exclude": [
-        "node_modules",
-        "dist",
-        "build"
-    ],
+	"compilerOptions": {
+		"lib": ["es2015"],
+		"types": ["node", "jasmine"]
+	},
+	"exclude": ["node_modules", "dist", "build"]
 }
