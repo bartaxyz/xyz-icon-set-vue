@@ -21,7 +21,7 @@ npm i xyz-icon-set-vue
 
 ```js
 
-import { PaperPlane } from 'xyz-icon-set-react';
+import { PaperPlane } from 'xyz-icon-set-vue';
 
 export default {
     components: { PaperPlane },
