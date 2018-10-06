@@ -1,8 +1,20 @@
 import * as Vue from 'vue/dist/vue.js';
 import { XmlDocument as XMLDocument } from 'xmldoc';
-import XYZIconSet, { IconComponents } from 'xyz-icon-set';
+import XYZIconSet, { IconComponents, iconNames } from 'xyz-icon-set';
 
-const iconKeys = Object.keys(XYZIconSet);
+export {
+	IconTheme,
+	IconOptions,
+	IconContstructorOptions,
+	IconComponents,
+	IconCategory,
+	IconName,
+	IconComponentName,
+	iconCategories,
+	iconNames,
+	iconComponentNames,
+} from 'xyz-icon-set';
+
 const iconComponents = {};
 
 const generateVueIcon = (createElement, context, source) => {
@@ -28,42 +40,36 @@ const generateVueIcon = (createElement, context, source) => {
 	});
 };
 
-iconKeys.forEach(iconKey => {
-	const iconObject = XYZIconSet[iconKey];
-	const name = iconObject.regular.name;
-	const capitalizedName = name.charAt(0).toUpperCase() + name.slice(1);
+iconNames.forEach(iconName => {
+	const IconClass = XYZIconSet[iconName];
 
-	iconComponents[`${capitalizedName}Icon`] = (Vue as any).component(
-		`${capitalizedName}Icon`,
-		{
-			functional: true,
-			props: {
-				size: {
-					type: Number,
-					required: false,
-				},
-				theme: {
-					type: String,
-					required: false,
-				},
+	iconComponents[iconName] = (Vue as any).component(iconName, {
+		functional: true,
+		props: {
+			size: {
+				type: Number,
+				required: false,
 			},
-			render(createElement, context) {
-				if (context.props.theme === 'thin') {
-					return generateVueIcon(
-						createElement,
-						context,
-						iconObject.thin.source,
-					);
-				}
-
-				return generateVueIcon(
-					createElement,
-					context,
-					iconObject.regular.source,
-				);
+			theme: {
+				type: String,
+				required: false,
+			},
+			fillOpacity: {
+				type: Number,
+				required: false,
 			},
 		},
-	);
+		render(createElement, context) {
+			const icon = new IconClass({
+				theme: context.props.theme || 'regular',
+			});
+			const iconSource = icon.toString({
+				fillOpacity: parseFloat(context.props.fillOpacity) || 0,
+			});
+
+			return generateVueIcon(createElement, context, iconSource);
+		},
+	});
 });
 
 export default iconComponents as IconComponents;
