@@ -21,7 +21,7 @@ You can import icons selectively by its name with suffix "Icon" (to prevent vari
 ```typescript
 import XYZIconSet from 'xyz-icon-set-vue';
 
-const { PaperPlaneIcon } = XYZIconSet;
+import { PaperPlaneIcon } from 'xyz-icon-set-vue';
 ```
 
 
@@ -31,7 +31,7 @@ const { PaperPlaneIcon } = XYZIconSet;
 ```jsx
 import XYZIconSet from 'xyz-icon-set-vue';
 
-const { PaperPlaneIcon } = XYZIconSet;
+import { PaperPlaneIcon } from 'xyz-icon-set-vue';
 
 export default {
     components: { PaperPlaneIcon },
