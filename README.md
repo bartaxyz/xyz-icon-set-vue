@@ -19,7 +19,9 @@ npm install xyz-icon-set-vue
 You can import icons selectively by its name with suffix "Icon" (to prevent variable name collisions and misuse of keywords in cases such as `return` or `copy` icons).
 
 ```typescript
-import { PaperPlaneIcon } from 'xyz-icon-set-vue';
+import XYZIconSet from 'xyz-icon-set-vue';
+
+const { PaperPlaneIcon } = XYZIconSet;
 ```
 
 
@@ -27,7 +29,9 @@ import { PaperPlaneIcon } from 'xyz-icon-set-vue';
 ## Icon Component Reference
 
 ```jsx
-import { PaperPlaneIcon } from 'xyz-icon-set-vue';
+import XYZIconSet from 'xyz-icon-set-vue';
+
+const { PaperPlaneIcon } = XYZIconSet;
 
 export default {
     components: { PaperPlaneIcon },
