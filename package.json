@@ -1,6 +1,6 @@
 {
 	"name": "xyz-icon-set-vue",
-	"version": "0.41.1",
+	"version": "0.41.2",
 	"description": "Official Vue components package for icons from XYZ Icon Set",
 	"main": "dist/index.js",
 	"typings": "dist/index.d.ts",
@@ -11,7 +11,7 @@
 		"lint": "eslint src tests",
 		"lint:fix": "npm run lint -- --fix",
 		"test": "node ./dist/index.js",
-		"prepublishOnly": "npm run clean & npm run build && npm test"
+		"prepare": "npm run clean & npm run build && npm test"
 	},
 	"repository": {
 		"type": "git",
@@ -42,7 +42,6 @@
 		"eslint": "^4.19.1",
 		"eslint-config-airbnb": "^16.1.0",
 		"eslint-plugin-import": "^2.11.0",
-		"handlebars": "^4.0.11",
 		"rimraf": "^2.6.2",
 		"ts-node": "^7.0.1",
 		"typescript": "^2.6.2",
@@ -51,6 +50,6 @@
 	"dependencies": {
 		"vue": "^2.5.17",
 		"xmldoc": "^1.1.2",
-		"xyz-icon-set": "^0.41.1"
+		"xyz-icon-set": "^0.41.2"
 	}
 }

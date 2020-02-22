@@ -1,6 +1,7 @@
 import * as Vue from 'vue/dist/vue.js';
+import { Component } from 'vue';
 import { XmlDocument as XMLDocument } from 'xmldoc';
-import XYZIconSet, { IconComponents, iconNames } from 'xyz-icon-set';
+import XYZIconSet, { iconNames, IconComponents } from 'xyz-icon-set';
 
 export {
 	IconTheme,
@@ -14,8 +15,6 @@ export {
 	iconNames,
 	iconComponentNames,
 } from 'xyz-icon-set';
-
-const iconComponents = {};
 
 const generateVueIcon = (createElement, context, source) => {
 	const iconXML: XMLDocument = new XMLDocument(source);
@@ -40,10 +39,12 @@ const generateVueIcon = (createElement, context, source) => {
 	});
 };
 
+const iconComponents = {};
+
 iconNames.forEach(iconName => {
 	const IconClass = XYZIconSet[iconName];
 
-	iconComponents[iconName] = (Vue as any).component(iconName, {
+	const IconComponent = Vue.component(iconName, {
 		functional: true,
 		props: {
 			size: {
@@ -70,6 +71,8 @@ iconNames.forEach(iconName => {
 			return generateVueIcon(createElement, context, iconSource);
 		},
 	});
+
+	iconComponents[iconName] = IconComponent;
 });
 
-export default iconComponents as IconComponents;
+export default iconComponents as IconComponents<Component>;
