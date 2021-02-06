@@ -2,6 +2,8 @@
 
 Official Vue components package for icons from [XYZ Icon Set](https://github.com/bartaxyz/xyz-icon-set).
 
+List of icons available at [XYZ Icon Set Website](https://ondrejbarta.xyz/pet-projects/xyz-icon-set)
+
 ### 
 
 ## Usage
@@ -52,7 +54,7 @@ export default {
 
 #### `theme`
 
-Either `regular` or `thin`. For icon visual reference, visit [XYZ Icon Set Website](https://ondrejbarta.xyz/xyz-icon-set).
+Either `regular` or `thin`. For icon visual reference, visit [XYZ Icon Set Website](https://ondrejbarta.xyz/pet-projects/xyz-icon-set).
 
 **Default value: `regular`**
 
