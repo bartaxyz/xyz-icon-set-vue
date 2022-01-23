@@ -39,10 +39,12 @@ const generateVueIcon = (createElement, context, source) => {
 	});
 };
 
-const iconComponents = {};
+const iconComponents = {} as IconComponents<Component>;
 
 iconNames.forEach(iconName => {
 	const IconClass = XYZIconSet[iconName];
+
+	console.log(Object.keys(iconComponents).length);
 
 	const IconComponent = Vue.component(iconName, {
 		functional: true,

@@ -1,6 +1,6 @@
 {
 	"name": "xyz-icon-set-vue",
-	"version": "0.43.0",
+	"version": "0.44.0",
 	"description": "Official Vue components package for icons from XYZ Icon Set",
 	"main": "dist/index.js",
 	"typings": "dist/index.d.ts",
@@ -10,7 +10,7 @@
 		"build": "tsc src/index.ts -d --skipLibCheck --outDir dist/",
 		"lint": "eslint src tests",
 		"lint:fix": "npm run lint -- --fix",
-		"test": "node ./dist/index.js",
+		"test": "echo \"Testing not implemented yet\"",
 		"prepare": "npm run clean & npm run build && npm test"
 	},
 	"repository": {
@@ -50,6 +50,6 @@
 	"dependencies": {
 		"vue": "^2.5.17",
 		"xmldoc": "^1.1.2",
-		"xyz-icon-set": "^0.43.0"
+		"xyz-icon-set": "^0.44.0"
 	}
 }
