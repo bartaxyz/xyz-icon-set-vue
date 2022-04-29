@@ -1,6 +1,6 @@
 {
 	"name": "xyz-icon-set-vue",
-	"version": "0.46.0",
+	"version": "0.47.0",
 	"description": "Official Vue components package for icons from XYZ Icon Set",
 	"main": "dist/index.js",
 	"typings": "dist/index.d.ts",
@@ -30,26 +30,26 @@
 	},
 	"homepage": "https://github.com/bartaxyz/xyz-icon-set-vue",
 	"devDependencies": {
-		"@babel/cli": "^7.0.0-beta.32",
-		"@babel/core": "^7.0.0-beta.32",
-		"@babel/plugin-proposal-class-properties": "^7.0.0-beta.32",
-		"@babel/plugin-proposal-object-rest-spread": "^7.0.0-beta.32",
-		"@babel/preset-env": "^7.0.0-beta.32",
-		"@babel/preset-typescript": "^7.0.0-beta.32",
-		"@babel/register": "^7.0.0-rc.1",
-		"@types/node": "^10.0.0",
-		"@types/xmldoc": "^1.1.3",
-		"eslint": "^4.19.1",
-		"eslint-config-airbnb": "^16.1.0",
-		"eslint-plugin-import": "^2.11.0",
-		"rimraf": "^2.6.2",
-		"ts-node": "^7.0.1",
-		"typescript": "^2.6.2",
-		"typings": "^2.1.1"
+		"@babel/cli": "7.0.0-beta.32",
+		"@babel/core": "7.0.0-beta.32",
+		"@babel/plugin-proposal-class-properties": "7.0.0-beta.32",
+		"@babel/plugin-proposal-object-rest-spread": "7.0.0-beta.32",
+		"@babel/preset-env": "7.0.0-beta.32",
+		"@babel/preset-typescript": "7.0.0-beta.32",
+		"@babel/register": "7.0.0-rc.1",
+		"@types/node": "10.0.0",
+		"@types/xmldoc": "1.1.3",
+		"eslint": "4.19.1",
+		"eslint-config-airbnb": "16.1.0",
+		"eslint-plugin-import": "2.11.0",
+		"rimraf": "2.6.2",
+		"ts-node": "7.0.1",
+		"typescript": "2.6.2",
+		"typings": "2.1.1"
 	},
 	"dependencies": {
-		"vue": "^2.5.17",
-		"xmldoc": "^1.1.2",
-		"xyz-icon-set": "0.46.0"
+		"vue": "2.5.17",
+		"xmldoc": "1.1.2",
+		"xyz-icon-set": "0.47.0"
 	}
 }
